@@ -26,21 +26,24 @@
  * example should be removed and replaced with the actual
  * user project.
  *
+ * THIS FILE HAS BEEN GENERATED USING multi_tools_project CODEGEN
+ * IF YOU NEED TO MAKE EDITS TO IT, EDIT codegen/caravel_iface_header.txt
+ *
  *-------------------------------------------------------------
  */
 
 module user_project_wrapper #(
     parameter BITS = 32
-) (
+)(
 `ifdef USE_POWER_PINS
-    inout vdda1,	// User area 1 3.3V supply
-    inout vdda2,	// User area 2 3.3V supply
-    inout vssa1,	// User area 1 analog ground
-    inout vssa2,	// User area 2 analog ground
-    inout vccd1,	// User area 1 1.8V supply
-    inout vccd2,	// User area 2 1.8v supply
-    inout vssd1,	// User area 1 digital ground
-    inout vssd2,	// User area 2 digital ground
+    inout vdda1,       // User area 1 3.3V supply
+    inout vdda2,       // User area 2 3.3V supply
+    inout vssa1,       // User area 1 analog ground
+    inout vssa2,       // User area 2 analog ground
+    inout vccd1,       // User area 1 1.8V supply
+    inout vccd2,       // User area 2 1.8v supply
+    inout vssd1,       // User area 1 digital ground
+    inout vssd2,       // User area 2 digital ground
 `endif
 
     // Wishbone Slave ports (WB MI A)
@@ -78,46 +81,53 @@ module user_project_wrapper #(
     output [2:0] user_irq
 );
 
-/*--------------------------------------*/
-/* User project is instantiated  here   */
-/*--------------------------------------*/
+    // generate active wires
+    wire [31: 0] active;
+    assign active = la_data_in[31:0];
 
-user_proj_example mprj (
-`ifdef USE_POWER_PINS
-	.vccd1(vccd1),	// User area 1 1.8V power
-	.vssd1(vssd1),	// User area 1 digital ground
-`endif
+    // split remaining 96 logic analizer wires into 3 chunks
+    wire [31: 0] la1_data_in, la1_data_out, la1_oenb;
+    assign la1_data_in = la_data_in[63:32];
+    assign la1_data_out = la_data_out[63:32];
+    assign la1_oenb = la_oenb[63:32];
 
-    .wb_clk_i(wb_clk_i),
-    .wb_rst_i(wb_rst_i),
+    wire [31: 0] la2_data_in, la2_data_out, la2_oenb;
+    assign la2_data_in = la_data_in[95:64];
+    assign la2_data_out = la_data_out[95:64];
+    assign la2_oenb = la_oenb[95:64];
 
-    // MGMT SoC Wishbone Slave
+    wire [31: 0] la3_data_in, la3_data_out, la3_oenb;
+    assign la3_data_in = la_data_in[127:96];
+    assign la3_data_out = la_data_out[127:96];
+    assign la3_oenb = la_oenb[127:96];
 
-    .wbs_cyc_i(wbs_cyc_i),
-    .wbs_stb_i(wbs_stb_i),
-    .wbs_we_i(wbs_we_i),
-    .wbs_sel_i(wbs_sel_i),
-    .wbs_adr_i(wbs_adr_i),
-    .wbs_dat_i(wbs_dat_i),
-    .wbs_ack_o(wbs_ack_o),
-    .wbs_dat_o(wbs_dat_o),
 
-    // Logic Analyzer
+    // start of user project module instantiation
+    wrapped_ppm_coder wrapped_ppm_coder_2(
+        `ifdef USE_POWER_PINS
+        .vccd1 (vccd1),
+        .vssd1 (vssd1),
+        `endif
+        .wb_clk_i (wb_clk_i),
+        .active (active[2]),
+        .io_in (io_in[37:0]),
+        .io_out (io_out[37:0]),
+        .io_oeb (io_oeb[37:0])
+    );
 
-    .la_data_in(la_data_in),
-    .la_data_out(la_data_out),
-    .la_oenb (la_oenb),
+    wrapped_ppm_decoder wrapped_ppm_decoder_3(
+        `ifdef USE_POWER_PINS
+        .vccd1 (vccd1),
+        .vssd1 (vssd1),
+        `endif
+        .wb_clk_i (wb_clk_i),
+        .active (active[3]),
+        .io_in (io_in[37:0]),
+        .io_out (io_out[37:0]),
+        .io_oeb (io_oeb[37:0])
+    );
 
-    // IO Pads
-
-    .io_in (io_in),
-    .io_out(io_out),
-    .io_oeb(io_oeb),
-
-    // IRQ
-    .irq(user_irq)
-);
+    // end of module instantiation
 
 endmodule	// user_project_wrapper
-
 `default_nettype wire

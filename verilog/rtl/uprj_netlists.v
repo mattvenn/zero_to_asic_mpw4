@@ -1,4 +1,6 @@
-// SPDX-FileCopyrightText: 2020 Efabless Corporation
+// SPDX-FileCopyrightText: 
+// 2020 Efabless Corporation
+// 2021 Matt Venn
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,12 +19,16 @@
 `include "defines.v"
 `define USE_POWER_PINS
 
-`ifdef GL
-    // Assume default net type to be wire because GL netlists don't have the wire definitions
-    `default_nettype wire
-    `include "gl/user_project_wrapper.v"
-    `include "gl/user_proj_example.v"
-`else
-    `include "user_project_wrapper.v"
-    `include "user_proj_example.v"
-`endif
+`include "user_project_wrapper.v"
+//  1 Function generator             : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/wrapped_function_generator
+	`include "wrapped_function_generator/wrapper.v"
+	`include "wrapped_function_generator/function_generator/src/generator.v"
+	// include openram model
+	`include "libs.ref/sky130_sram_macros/verilog/sky130_sram_1kbyte_1rw1r_32x256_8.v"
+	// Wishbone bridge to split traffic into 2 streams: for user
+	// project and OpenRAM
+	`include "wb_bridge/src/wb_bridge_2way.v"
+	// Wishbone dual port wrapper for OpenRAM
+	`include "wb_openram_wrapper/src/wb_port_control.v"
+	`include "wb_openram_wrapper/src/wb_openram_wrapper.v"
+

@@ -74,18 +74,10 @@ lappend ::env(EXTRA_GDS_FILES) $::env(PDK_ROOT)/$::env(PDK)/libs.ref/sky130_sram
 # turn off li for any routing
 # and add workaround for routing issues with openram by adding
 # 479 wide x 397 tall obs (from openram 0,0) on met2,3,4
-#openram_1kB 344 475.5 N
 set ::env(GLB_RT_OBS)  "li1  0    0   2920    3520,
                         met4 344 475.5 823.5 872.5,
                         met3 344 475.5 823.5 872.5,
                         met2 344 475.5 823.5 872.5"
-#                        met3 820.99 536.97 823.15 860.39"
-#                        met3 823.16 858.11 824.07 858.70,
-#                        met3 823.16 857.00 824.07 857.57,
-#                        met3 823.16 550.75 824.07 551.35,
-#                        met3 823.16 549.62 824.07 550.21"
-#                        met4 344  474 822     864,
-#                        met2 344  474 822     864"
 
 set ::env(GLB_RT_ALLOW_CONGESTION) "1"
 

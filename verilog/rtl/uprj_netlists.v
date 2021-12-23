@@ -32,15 +32,15 @@
 `include "wrapped_spell/verispell/src/mem_io.v"
 //  2 PPM Coder                      : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/wrapped_ppm_coder
 `include "wrapped_ppm_coder/wrapper.v"
-`include "wrapped_ppm_coder/PPM-FPGA-to-ASIC-WMX/Coder_4_8_Ch/src/verilog/PPM_Coder_v2.1.v"
+`include "wrapped_ppm_coder/src/PPM_Coder_v2.1.v"
 //  3 PPM Decoder                    : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/wrapped_ppm_decoder
 `include "wrapped_ppm_decoder/wrapper.v"
-`include "wrapped_ppm_decoder/PPM-FPGA-to-ASIC-WMX/Coder_4_8_Ch/src/verilog/PPM_Coder_v2.1.v"
+`include "wrapped_ppm_decoder/src/Module_Decoder_8Ch_ASIC.v"
 // shared Bridge                         : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/wb_bridge
-`include "wb_bridge/src/wb_bridge_2way.v"
 // shared Wrapper                        : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/wb_openram_wrapper
+// shared OpenRAM 1kybte                 : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/openram_z2a
+`include "wb_bridge/src/wb_bridge_2way.v"
 `include "wb_openram_wrapper/src/wb_port_control.v"
 `include "wb_openram_wrapper/src/wb_openram_wrapper.v"
-// shared OpenRAM 1kybte                 : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/openram_z2a
 `include "openram_z2a/src/sky130_sram_1kbyte_1rw1r_32x256_8.v"
 

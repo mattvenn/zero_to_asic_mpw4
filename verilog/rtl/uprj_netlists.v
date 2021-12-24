@@ -36,6 +36,14 @@
 //  3 PPM Decoder                    : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/wrapped_ppm_decoder
 `include "wrapped_ppm_decoder/wrapper.v"
 `include "wrapped_ppm_decoder/src/Module_Decoder_8Ch_ASIC.v"
+//  4 SiLife                         : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/wrapped_silife
+`include "wrapped_silife/wrapper.v"
+`include "wrapped_silife/silife/src/cell.v"
+`include "wrapped_silife/silife/src/grid_32x32.v"
+`include "wrapped_silife/silife/src/grid_wishbone.v"
+`include "wrapped_silife/silife/src/spi_master.v"
+`include "wrapped_silife/silife/src/max7219.v"
+`include "wrapped_silife/silife/src/silife.v"
 // shared Bridge                         : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/wb_bridge
 // shared Wrapper                        : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/wb_openram_wrapper
 // shared OpenRAM 1kybte                 : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/openram_z2a

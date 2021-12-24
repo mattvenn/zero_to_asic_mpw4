@@ -21,7 +21,7 @@ The OpenLANE config was generated with this command:
 
 * Author: Uri Shaked
 * Github: https://github.com/wokwi/wrapped_spell
-* commit: 1ed0cc4130c9f14d34b073e22455dc922470a438
+* commit: 4db5165ac2e450a62a249285c1a7374a836b5167
 * Description: SPELL CPU (https://skullctf.com/spell)
 
 ![SPELL](pics/spell.png)
@@ -43,4 +43,13 @@ The OpenLANE config was generated with this command:
 * Description: Fuentes Codificador PPM configurable
 
 ![PPM Decoder](pics/01_Module_Decoder_8Ch.png)
+
+## SiLife
+
+* Author: Uri Shaked
+* Github: https://github.com/wokwi/wrapped_silife
+* commit: b92e8d446910b7a87c406c78bd6403e7a8be2c14
+* Description: Game of Life, in Silicon
+
+![SiLife](pics/silife.png)
 

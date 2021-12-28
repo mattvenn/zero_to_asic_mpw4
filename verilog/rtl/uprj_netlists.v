@@ -44,9 +44,12 @@
 `include "wrapped_silife/silife/src/spi_master.v"
 `include "wrapped_silife/silife/src/max7219.v"
 `include "wrapped_silife/silife/src/silife.v"
-// shared Bridge                         : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/wb_bridge
-// shared Wrapper                        : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/wb_openram_wrapper
-// shared OpenRAM 1kybte                 : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/openram_z2a
+//  5 SkullFET                       : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/wrapped_skullfet
+`include "wrapped_skullfet/wrapper.v"
+`include "wrapped_skullfet/src/skullfet-functional.v"
+// shared Bridge                     : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/wb_bridge
+// shared Wrapper                    : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/wb_openram_wrapper
+// shared OpenRAM 1kybte             : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/openram_z2a
 `include "wb_bridge/src/wb_bridge_2way.v"
 `include "wb_openram_wrapper/src/wb_port_control.v"
 `include "wb_openram_wrapper/src/wb_openram_wrapper.v"

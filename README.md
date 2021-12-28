@@ -53,3 +53,12 @@ The OpenLANE config was generated with this command:
 
 ![SiLife](pics/silife.png)
 
+## SkullFET
+
+* Author: Uri Shaked
+* Github: https://github.com/wokwi/wrapped_skullfet
+* commit: c5622d59bab9ab60f2dbe3777d7575214860167c
+* Description: Barebone MOSFET transistors
+
+![SkullFET](pics/skullfet_inverter.png)
+

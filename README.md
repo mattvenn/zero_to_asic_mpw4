@@ -48,7 +48,7 @@ The OpenLANE config was generated with this command:
 
 * Author: Uri Shaked
 * Github: https://github.com/wokwi/wrapped_silife
-* commit: b92e8d446910b7a87c406c78bd6403e7a8be2c14
+* commit: 0548f0c33b8b92e78c4169ca8b23af5151831c72
 * Description: Game of Life, in Silicon
 
 ![SiLife](pics/silife.png)
@@ -57,8 +57,17 @@ The OpenLANE config was generated with this command:
 
 * Author: Uri Shaked
 * Github: https://github.com/wokwi/wrapped_skullfet
-* commit: c5622d59bab9ab60f2dbe3777d7575214860167c
+* commit: c583f431e0b6f280f91520725f313aebbab86fdd
 * Description: Barebone MOSFET transistors
 
 ![SkullFET](pics/skullfet_inverter.png)
+
+## SPRAID
+
+* Author: Dylan Wadler
+* Github: https://github.com/bit0fun/spraid_mpw4
+* commit: 8b854912b6bee89d19665b0c7fe0e7156f0a0cbc
+* Description: SPI RAID Controller
+
+![SPRAID](pics/empty.png)
 

@@ -47,6 +47,16 @@
 //  5 SkullFET                       : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/wrapped_skullfet
 `include "wrapped_skullfet/wrapper.v"
 `include "wrapped_skullfet/src/skullfet-functional.v"
+//  6 SPRAID                         : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/spraid_mpw4
+`include "spraid_mpw4/wrapper.v"
+`include "spraid_mpw4/spraid/src/flash_ctl.v"
+`include "spraid_mpw4/spraid/src/pload_shift.v"
+`include "spraid_mpw4/spraid/src/raid.v"
+`include "spraid_mpw4/spraid/src/spi32.v"
+`include "spraid_mpw4/spraid/src/spi_master.v"
+`include "spraid_mpw4/spraid/src/spraid.v"
+`include "spraid_mpw4/spraid/src/sync_fifo.v"
+`include "spraid_mpw4/spraid/src/wb_spraid.v"
 // shared Bridge                     : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/wb_bridge
 // shared Wrapper                    : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/wb_openram_wrapper
 // shared OpenRAM 1kybte             : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/openram_z2a

@@ -48,7 +48,7 @@ The OpenLANE config was generated with this command:
 
 * Author: Uri Shaked
 * Github: https://github.com/wokwi/wrapped_silife
-* commit: 0548f0c33b8b92e78c4169ca8b23af5151831c72
+* commit: 28c2fc901365444c992c94660594b946216ad1ec
 * Description: Game of Life, in Silicon
 
 ![SiLife](pics/silife.png)
@@ -66,8 +66,26 @@ The OpenLANE config was generated with this command:
 
 * Author: Dylan Wadler
 * Github: https://github.com/bit0fun/spraid_mpw4
-* commit: 8b854912b6bee89d19665b0c7fe0e7156f0a0cbc
+* commit: 69aa8a41cdbf87ca65c8793ba47a924204e8cb88
 * Description: SPI RAID Controller
 
 ![SPRAID](pics/empty.png)
+
+## ASIC watch
+
+* Author: Guillem Cabo & Ledoux Louis
+* Github: https://github.com/Bynaryman/wrapped_asic_watch
+* commit: d19b10006c3247f6a11fd3e14d854422d85ab37d
+* Description: a 7 segment fashion watch targeting asic and sky130 process node
+
+![ASIC watch](pics/layers.png)
+
+## Hack soc
+
+* Author: Maximo Balestrini
+* Github: https://github.com/mbalestrini/wrapped_hack_soc
+* commit: 048ca9374c0a7984064827bf1d547191a7e5b50d
+* Description: Hardware implementation of the Hack Computer from the Nand to Tetris courses
+
+![Hack soc](pics/project.jpg)
 

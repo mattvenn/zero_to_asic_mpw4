@@ -1,5 +1,7 @@
 # Zero to ASIC Course MPW4
 
+This ASIC was designed by members of the [Zero to ASIC course](https://zerotoasiccourse.com).
+
 This index was made with [multi project tools](https://github.com/mattvenn/multi_project_tools) at commit 46a776b27ff3d422db1e3554d6e046daf8806ea5
 
 The submission was configured and built with these commands:

@@ -2,9 +2,19 @@
 
 This index was made with [multi project tools](https://github.com/mattvenn/multi_project_tools) at commit 46a776b27ff3d422db1e3554d6e046daf8806ea5
 
-The OpenLANE config was generated with this command:
+The submission was configured and built with these commands:
 
-    ./multi_tool.py --create-openlane-config --copy-gds  -force-delete
+    # includes OpenRAM
+    ./multi_tool.py --clone-repos --clone-shared-repos --create-openlane-config --copy-gds --copy-project --openram
+
+    # after setup, if a project changes
+    ./multi_tool.py --create-openlane-config --copy-gds --copy-project --openram --force
+
+    # build user project wrapper submission
+    cd $CARAVEL_ROOT; make user_project_wrapper
+
+    # create docs
+    ./multi_tool.py --generate-doc --annotate-image
 
 ![multi macro](pics/multi_macro_annotated.png)
 

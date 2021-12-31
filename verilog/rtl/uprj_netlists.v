@@ -86,6 +86,16 @@
 `include "wrapped_hack_soc/hack_soc/src/rom_stream_loader.v"
 `include "wrapped_hack_soc/hack_soc/src/boot_logo.v"
 `include "wrapped_hack_soc/hack_soc/src/DFFRF_2R1W.v"
+// 12 keyvalue                       : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/wrapped_keyvalue
+`include "wrapped_keyvalue/wrapper.v"
+`include "wrapped_keyvalue/src/keyvalue_1.v"
+`include "wrapped_keyvalue/src/keyvalue_2.v"
+//  7 7 bit xnor popcount array multiplication : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/wrapped_bin_mult
+`include "wrapped_bin_mult/wrapper.v"
+`include "wrapped_bin_mult/bin_mult/src/wb_top_bin_mult.v"
+`include "wrapped_bin_mult/bin_mult/src/xnor7.v"
+`include "wrapped_bin_mult/bin_mult/src/bin_mult.v"
+`include "wrapped_bin_mult/bin_mult/src/top_bin_mult.v"
 // shared Bridge                     : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/wb_bridge
 // shared Wrapper                    : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/wb_openram_wrapper
 // shared OpenRAM 1kybte             : /home/matt/work/asic-workshop/shuttle3-mpw-3/openlane/designs/openram_z2a

@@ -1,6 +1,6 @@
 # Zero to ASIC Course MPW4
 
-This index was made with [multi project tools](https://github.com/mattvenn/multi_project_tools) at commit 7046bed1766ffd05bd83d3c1eac5064fe658a4f3
+This index was made with [multi project tools](https://github.com/mattvenn/multi_project_tools) at commit 46a776b27ff3d422db1e3554d6e046daf8806ea5
 
 The OpenLANE config was generated with this command:
 
@@ -69,7 +69,7 @@ The OpenLANE config was generated with this command:
 * commit: 69aa8a41cdbf87ca65c8793ba47a924204e8cb88
 * Description: SPI RAID Controller
 
-![SPRAID](pics/empty.png)
+![SPRAID](pics/spraid.png)
 
 ## ASIC watch
 

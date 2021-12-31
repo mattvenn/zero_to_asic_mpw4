@@ -2,15 +2,13 @@
 
 This ASIC was designed by members of the [Zero to ASIC course](https://zerotoasiccourse.com).
 
-This index was made with [multi project tools](https://github.com/mattvenn/multi_project_tools) at commit 46a776b27ff3d422db1e3554d6e046daf8806ea5
+This submission was configured and built by the [multi project tools](https://github.com/mattvenn/multi_project_tools) at commit 46a776b27ff3d422db1e3554d6e046daf8806ea5
 
-The submission was configured and built with these commands:
-
-    # includes OpenRAM
+    # clone all repos, and include support for shared OpenRAM
     ./multi_tool.py --clone-repos --clone-shared-repos --create-openlane-config --copy-gds --copy-project --openram
 
-    # after setup, if a project changes
-    ./multi_tool.py --create-openlane-config --copy-gds --copy-project --openram --force
+    # run all the tests
+    ./multi_tool.py --test-all --force-delete
 
     # build user project wrapper submission
     cd $CARAVEL_ROOT; make user_project_wrapper

@@ -58,7 +58,7 @@ This submission was configured and built by the [multi project tools](https://gi
 
 * Author: Uri Shaked
 * Github: https://github.com/wokwi/wrapped_silife
-* commit: 28c2fc901365444c992c94660594b946216ad1ec
+* commit: c3eb7d8bdaa1953ecf13adc21d33dd4326a559c9
 * Description: Game of Life, in Silicon
 
 ![SiLife](pics/silife.png)
@@ -76,8 +76,8 @@ This submission was configured and built by the [multi project tools](https://gi
 
 * Author: Dylan Wadler
 * Github: https://github.com/bit0fun/spraid_mpw4
-* commit: 69aa8a41cdbf87ca65c8793ba47a924204e8cb88
-* Description: SPI RAID Controller
+* commit: 783bea43f33531757a7beadc4c3e0dd347f8571a
+* Description: SPI RAID Controller: Supports RAID0, RAID1, RAID5 with 4 SPI Flash devices
 
 ![SPRAID](pics/spraid.png)
 
@@ -90,12 +90,21 @@ This submission was configured and built by the [multi project tools](https://gi
 
 ![ASIC watch](pics/layers.png)
 
-## Hack soc
+## keyvalue
 
-* Author: Maximo Balestrini
-* Github: https://github.com/mbalestrini/wrapped_hack_soc
-* commit: 048ca9374c0a7984064827bf1d547191a7e5b50d
-* Description: Hardware implementation of the Hack Computer from the Nand to Tetris courses
+* Author: Giray Pultar
+* Github: https://github.com/giraypultar/wrapped_keyvalue
+* commit: 76cd2077ca5f684f8ccdda93b79bef78c675a149
+* Description: key value store
 
-![Hack soc](pics/project.jpg)
+![keyvalue](pics/keyvalue.png)
+
+## 7 bit xnor popcount array multiplication
+
+* Author: tucanae47
+* Github: https://github.com/tucanae47/wrapped_bin_mult
+* commit: 0764fe1bf1ffcbca5dfb86d68c8e37c3319b6266
+* Description: description
+
+![7 bit xnor popcount array multiplication](pics/bin_mult_design.png)
 

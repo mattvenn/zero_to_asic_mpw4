@@ -2,6 +2,8 @@
 
 This ASIC was designed by members of the [Zero to ASIC course](https://zerotoasiccourse.com).
 
+It was taped out on MPW4, and then resubmitted to MPW5. MPW5 precheck found problems with hacksoc, so this project was removed.
+
 This submission was configured and built by the [multi project tools](https://github.com/mattvenn/multi_project_tools) at commit 46a776b27ff3d422db1e3554d6e046daf8806ea5
 
     # clone all repos, and include support for shared OpenRAM
